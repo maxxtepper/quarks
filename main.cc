@@ -1,19 +1,16 @@
 #include <iostream>
 
-enum COLOR {R,G,B};
-enum PAIRITY {P,N};
-enum GEN {U,C,T};
+enum COLOR {R,G,B}; // Color charge
+enum PAIRITY {A,nA}; // Particle or anti-particle
+enum POLARITY {P,N}; // EM charge sign
+enum GEN {U,C,T}; // Quark generation
 
 class quark {
-	//	3 bits total
+	//	6 bits total
 	uint8_t color; //	Make 2 bits
 	uint8_t pairity; //	Make 1 bit
+	uint8_t polarity; //	Make 1 bit
 	uint8_t gen; //	Make 2 bits
-	// Parity + Gen = up,down,charm,strange,top,bottom
-
-	//	RGB and anti
-	//	aR,aG,aB,R,G,B;
-
 };
 
 int main(int argc, char* argv[]) {
@@ -26,6 +23,10 @@ int main(int argc, char* argv[]) {
 	proton_quark[0].color=R;
 	proton_quark[1].color=G;
 	proton_quark[2].color=B;
+	//	Pairty = ?
+	proton_quark[0].pairity=nA;
+	proton_quark[1].pairity=nA;
+	proton_quark[2].pairity=nA;
 	//	Charge = +1
 	//	CONSTANT
 	proton_quark[0].polarity=P;
@@ -45,6 +46,10 @@ int main(int argc, char* argv[]) {
 	neutron_quark[0].color=R;
 	neutron_quark[1].color=G;
 	neutron_quark[2].color=B;
+	//	Pairity = ?
+	neutron_quark[0].pairity=nA;
+	neutron_quark[1].pairity=nA;
+	neutron_quark[2].pairity=nA;
 	//	Charge = 0
 	//	CONSTANT
 	neutron_quark[0].polarity=P;

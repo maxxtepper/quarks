@@ -1,1 +1,7 @@
 This is the README for quarks
+
+To have an Up quark, the following must be true:
+quark.color    = *;
+quark.pairity  = nANTI;
+quark.polarity = POSITIVE;
+quark.gen      = FISRT;
